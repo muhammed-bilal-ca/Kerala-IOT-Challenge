@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "gd-task-icons";
+  src:url("gd-task-icons/gd-task-icons.eot");
+  src:url("gd-task-icons/gd-task-iconsd41d.eot?#iefix") format("embedded-opentype"),
+    url("gd-task-icons/gd-task-icons.woff") format("woff"),
+    url("gd-task-icons/gd-task-icons.ttf") format("truetype"),
+    url("gd-task-icons/gd-task-icons.svg#gd-task-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "gd-task-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="gdt-"]:before,
+[class*=" gdt-"]:before {
+  font-family: "gd-task-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gdt-beer:before {
+  content: "\63";
+}
+.gdt-book:before {
+  content: "\65";
+}
+.gdt-briefcase:before {
+  content: "\66";
+}
+.gdt-broadcast:before {
+  content: "\67";
+}
+.gdt-cloud-download:before {
+  content: "\6b";
+}
+.gdt-database:before {
+  content: "\6f";
+}
+.gdt-device-camera:before {
+  content: "\70";
+}
+.gdt-device-camera-video:before {
+  content: "\71";
+}
+.gdt-device-desktop:before {
+  content: "\6d";
+}
+.gdt-device-mobile:before {
+  content: "\6e";
+}
+.gdt-file-binary:before {
+  content: "\72";
+}
+.gdt-file-contact:before {
+  content: "\74";
+}
+.gdt-gift:before {
+  content: "\76";
+}
+.gdt-globe:before {
+  content: "\77";
+}
+.gdt-flame:before {
+  content: "\78";
+}
+.gdt-key:before {
+  content: "\45";
+}
+.gdt-law:before {
+  content: "\47";
+}
+.gdt-link:before {
+  content: "\48";
+}
+.gdt-location:before {
+  content: "\49";
+}
+.gdt-mention:before {
+  content: "\4e";
+}
+.gdt-milestone:before {
+  content: "\50";
+}
+.gdt-mail:before {
+  content: "\4c";
+}
+.gdt-mail-read:before {
+  content: "\51";
+}
+.gdt-graduation:before {
+  content: "\23";
+}
+.gdt-tag:before {
+  content: "\68";
+}
+.gdt-task:before {
+  content: "\4b";
+}
+.gdt-open-folder:before {
+  content: "\62";
+}
+.gdt-emergency:before {
+  content: "\30";
+}
+.gdt-bottleneck:before {
+  content: "\24";
+}
+.gdt-project:before {
+  content: "\25";
+}
+.gdt-question:before {
+  content: "\5a";
+}
+.gdt-social-android:before {
+  content: "\61";
+}
+.gdt-social-apple:before {
+  content: "\29";
+}
+.gdt-social-youtube:before {
+  content: "\46";
+}
+.gdt-social-windows:before {
+  content: "\4a";
+}
+.gdt-someday:before {
+  content: "\4d";
+}
+.gdt-sprint:before {
+  content: "\27";
+}
+.gdt-file-text:before {
+  content: "\75";
+}
+.gdt-graph:before {
+  content: "\7a";
+}
+.gdt-steps:before {
+  content: "\53";
+}
+.gdt-pulse:before {
+  content: "\54";
+}
+.gdt-squirrel:before {
+  content: "\55";
+}
+.gdt-social-rss:before {
+  content: "\56";
+}
+.gdt-search:before {
+  content: "\57";
+}
+.gdt-telescope:before {
+  content: "\58";
+}
+.gdt-tools:before {
+  content: "\59";
+}
+.gdt-bookmark:before {
+  content: "\31";
+}
+.gdt-first-aid:before {
+  content: "\37";
+}
+.gdt-contact:before {
+  content: "\64";
+}
+.gdt-home:before {
+  content: "\41";
+}
+.gdt-mail-black:before {
+  content: "\42";
+}
+.gdt-shopping-cart:before {
+  content: "\33";
+}
+.gdt-shield:before {
+  content: "\21";
+}
+.gdt-paint-bucket:before {
+  content: "\2a";
+}
+.gdt-idea:before {
+  content: "\2b";
+}
+.gdt-quote:before {
+  content: "\44";
+}
+.gdt-projection-screen:before {
+  content: "\22";
+}
+.gdt-trophy:before {
+  content: "\26";
+}
+.gdt-brush:before {
+  content: "\28";
+}
+.gdt-bucket:before {
+  content: "\2c";
+}
+.gdt-social-twitter:before {
+  content: "\52";
+}
+.gdt-rocket:before {
+  content: "\2d";
+}
+.gdt-phone:before {
+  content: "\2e";
+}
+.gdt-megaphone:before {
+  content: "\2f";
+}
+.gdt-money:before {
+  content: "\4f";
+}
+.gdt-plane:before {
+  content: "\3b";
+}
+.gdt-kanban:before {
+  content: "\3c";
+}
+.gdt-leads:before {
+  content: "\3d";
+}
+.gdt-file-code:before {
+  content: "\3f";
+}
+.gdt-brand:before {
+  content: "\40";
+}
+.gdt-agile:before {
+  content: "\69";
+}
+.gdt-anchor:before {
+  content: "\6a";
+}
+.gdt-api:before {
+  content: "\6c";
+}
+.gdt-qa:before {
+  content: "\73";
+}
+.gdt-archive:before {
+  content: "\79";
+}
+.gdt-bug:before {
+  content: "\43";
+}
+.gdt-burst:before {
+  content: "\32";
+}
+.gdt-calendar:before {
+  content: "\34";
+}
+.gdt-cloud:before {
+  content: "\35";
+}
+.gdt-cloud-upload:before {
+  content: "\36";
+}
+.gdt-project-dev:before {
+  content: "\38";
+}
+.gdt-assets:before {
+  content: "\39";
+}
+.gdt-documents:before {
+  content: "\3e";
+}
+.gdt-event:before {
+  content: "\5d";
+}
+.gdt-image:before {
+  content: "\5e";
+}
+.gdt-inventory:before {
+  content: "\5f";
+}
+.gdt-user-search:before {
+  content: "\60";
+}
+.gdt-target:before {
+  content: "\7b";
+}
+.gdt-aim:before {
+  content: "\7d";
+}
+.gdt-request:before {
+  content: "\7e";
+}
+.gdt-request2:before {
+  content: "\5c";
+}
+.gdt-support:before {
+  content: "\e000";
+}
+.gdt-task-list:before {
+  content: "\3a";
+}
+.gdt-past-due:before {
+  content: "\5b";
+}
+.gdt-resource-planning:before {
+  content: "\e003";
+}
