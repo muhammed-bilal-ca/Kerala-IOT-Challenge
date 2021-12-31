@@ -26,6 +26,16 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/common/favico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
+    <style>
+        code {
+          font-family: Consolas,"courier new";
+          color: crimson;
+          background-color: #f1f1f1;
+          padding: 2px;
+          font-size: 105%;
+        }
+    </style>
 
 </head>
 
@@ -80,7 +90,19 @@
                         <h3>Circuit Diagram</h3> <br>
                         <img src="site\images\exp01.png" width="300" height="400">
                         <h3>Code</h3> <br>
+<code>void setup()
+{
+ pinMode(8, OUTPUT);
+}
 
+void loop()
+{
+ digitalWrite(8, HIGH);
+ delay(1000); // Wait for 1000 millisecond(s)
+ digitalWrite(8, LOW);
+ delay(1000); // Wait for 1000 millisecond(s)
+}
+</code>
 <span style="color:darkmagenta;background:skyblue;"> 
                         &nbsp&nbsp&nbsp&nbsp void setup() <br>
                         &nbsp&nbsp&nbsp&nbsp{<br>
