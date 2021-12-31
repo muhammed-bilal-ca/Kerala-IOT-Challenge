@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.goodday.work/templates/website-development by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Dec 2021 13:06:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>LEVEL 1</title>
+    <meta name="description" content="With the GoodDay project management template for website development, you can create flawless websites by tracking all the phases of your website development process.">
+
+    <link rel="stylesheet" type="text/css" href="site/assets/css/main580e.css?21-10-19">
+    <script src="site/assets/js/index580e.js?21-10-19"></script>
+
+
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+
+    
+    <link rel="manifest" href="https://www.goodday.work/common/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/common/favico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body class="page-templates page-template-view">
+    <div class="main-navigation ">
+        <div class="nav-web">
+            <div class="menu-container">
+                <h2 align="left">
+                    KERALA IOT CHALLENGE( 2021 - 22 )
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="gd-section white h-90">
+        <div class="gd-block ">
+        </div>
+    </div>
+    <div class="gd-page-with-subnav m-t-40">
+        <div class="gd-block">
+            
+            <div class="page-content">
+                    <u><h2>LEVEL 1 - EXPERIMENTS</h2></u>
+                    <h3>
+                    <li><a href="#exp01">EXP1-- Hello World LED Blinking</a></li>
+                    <li><a href="#exp02">EXP2-- Traffic Light</a></li>
+                    <li><a href="#exp03">EXP3-- LED Chasing Effect</a></li>   
+                    <li><a href="#exp04">EXP4-- Button Controlled LED</a></li>
+                    <li><a href="#exp05">EXP5-- Buzzer</a></li>   
+                    <li><a href="#exp06">EXP6-- RGB LED</a></li>   
+                    <li><a href="#exp07">EXP7-- LDR Light sensor</a></li>   
+                    <li><a href="#exp08">EXP8-- Flame sensor</a></li>   
+                    <li><a href="#exp09">EXP9-- LM35 Temperature Sensor</a></li>   
+                    <li><a href="#exp10">EXP10-- IR Remote Control Using TSOP</a></li>   
+                    <li><a href="#exp11">EXP11-- Potentiometer analog Value Reading</a></li>
+                    <li><a href="#exp12">EXP12-- 7 Segment Display</a></li> </h3>                  
+
+                       
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp01">   
+                            <h1> -- Experiment01 -- </h1> <br>         
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <img src="site\images\exp01.png" width="300" height="400">
+                        <h3>Code</h3> <br>
+
+<span style="color:darkmagenta;background:skyblue;"> 
+                        &nbsp&nbsp&nbsp&nbsp void setup() <br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                        &nbsp&nbsp&nbsp&nbsppinMode(10, OUTPUT);<br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+
+                        &nbsp&nbsp&nbsp&nbspvoid loop()<br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                          &nbsp&nbsp&nbsp&nbspdigitalWrite(8, HIGH);<br>
+                          &nbsp&nbsp&nbsp&nbspdelay(1000); // Wait for 1000 millisecond(s)<br>
+                          &nbsp&nbsp&nbsp&nbspdigitalWrite(8, LOW);<br>
+                          &nbsp&nbsp&nbsp&nbspdelay(1000); // Wait for 1000 millisecond(s)<br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+
+</span> 
+
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp02">   
+                            <h1> -- Experiment02 -- </h1>          
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino board *1</li>
+                            <li>USB cable *1</li>
+                            <li>Red M5 LED*1</li>
+                            <li>Yellow M5 LED*1</li>
+                            <li>Green M5 LED*1</li>
+                            <li>220Ω resistor *3</li>
+                            <li>Breadboard*1</li>
+                            <li>Breadboard jumper wires* several</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <img src="site\images\exp02.png" width="300" height="400">
+                        <h3>Code</h3> <br>
+<span style="color:darkmagenta;background:skyblue;"> 
+
+                        &nbsp&nbsp&nbsp&nbspint redled =10; // initialize digital pin 8.<br>
+                        &nbsp&nbsp&nbsp&nbspint yellowled =7; // initialize digital pin 7.<br>
+                        &nbsp&nbsp&nbsp&nbspint greenled =4; // initialize digital pin 4.<br>
+                        &nbsp&nbsp&nbsp&nbspvoid setup()<br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                        &nbsp&nbsp&nbsp&nbsppinMode(redled, OUTPUT);// set the pin with red LED as “output”<br>
+                        &nbsp&nbsp&nbsp&nbsppinMode(yellowled, OUTPUT); // set the pin with yellow LED as “output”<br>
+                        &nbsp&nbsp&nbsp&nbsppinMode(greenled, OUTPUT); // set the pin with green LED as “output”<br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+                        &nbsp&nbsp&nbsp&nbspvoid loop()<br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                        &nbsp&nbsp&nbsp&nbspdigitalWrite(greenled, HIGH);//// turn on green LED<br>
+                        &nbsp&nbsp&nbsp&nbspdelay(5000);// wait 5 seconds<br>
+
+                        &nbsp&nbsp&nbsp&nbspdigitalWrite(greenled, LOW); // turn off green LED<br>
+                        &nbsp&nbsp&nbsp&nbspfor(int i=0;i<3;i++)// blinks for 3 times<br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                        &nbsp&nbsp&nbsp&nbspdelay(500);// wait 0.5 second<br>
+                        &nbsp&nbsp&nbsp&nbspdigitalWrite(yellowled, HIGH);// turn on yellow LED<br>
+                        &nbsp&nbsp&nbsp&nbspdelay(500);// wait 0.5 second<br>
+                        &nbsp&nbsp&nbsp&nbspdigitalWrite(yellowled, LOW);// turn off yellow LED<br>
+                        &nbsp&nbsp&nbsp&nbsp} <br>
+                        &nbsp&nbsp&nbsp&nbspdelay(500);// wait 0.5 second<br>
+                        &nbsp&nbsp&nbsp&nbspdigitalWrite(redled, HIGH);// turn on red LED<br>
+                        &nbsp&nbsp&nbsp&nbspdelay(5000);// wait 5 seconds<br>
+                        &nbsp&nbsp&nbsp&nbspdigitalWrite(redled, LOW);// turn off red LED<br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+</span>
+                        <h3>Video Tutorial</h3> <br>
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp03">   
+                            <h1> -- Experiment03 -- </h1>          
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <img src="site\images\exp03.png" width="300" height="400">
+
+                        <h3>Code</h3> <br>
+<span style="color:darkmagenta;background:skyblue;"> 
+
+                        &nbsp&nbsp&nbsp&nbspint BASE = 2 ;  // the I/O pin for the first LED<br>
+                        &nbsp&nbsp&nbsp&nbspint NUM = 6;   // number of LEDs<br>
+                        &nbsp&nbsp&nbsp&nbspvoid setup()<br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                           &nbsp&nbsp&nbsp&nbspfor (int i = BASE; i < BASE + NUM; i ++) <br>
+                           &nbsp&nbsp&nbsp&nbsp{<br>
+                             &nbsp&nbsp&nbsp&nbsppinMode(i, OUTPUT);   // set I/O pins as output<br>
+                           &nbsp&nbsp&nbsp&nbsp}<br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+                        &nbsp&nbsp&nbsp&nbspvoid loop()<br>
+                        &nbsp&nbsp&nbsp&nbsp{<br>
+                           &nbsp&nbsp&nbsp&nbspfor (int i = BASE; i < BASE + NUM; i ++) <br>
+                           &nbsp&nbsp&nbsp&nbsp{<br>
+                             &nbsp&nbsp&nbsp&nbspdigitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
+                             &nbsp&nbsp&nbsp&nbspdelay(200);        // delay<br>
+                           &nbsp&nbsp&nbsp&nbsp}<br>
+                           &nbsp&nbsp&nbsp&nbspfor (int i = BASE; i < BASE + NUM; i ++) <br>
+                           &nbsp&nbsp&nbsp&nbsp{<br>
+                             &nbsp&nbsp&nbsp&nbspdigitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
+                             &nbsp&nbsp&nbsp&nbspdelay(200);        // delay<br>
+                           &nbsp&nbsp&nbsp&nbsp}  <br>
+                        &nbsp&nbsp&nbsp&nbsp}<br>
+</span>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp04">   
+                            <h1> -- Experiment04 -- </h1>          
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp05">   
+                            <h1> -- Experiment05 -- </h1>          
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp06">   
+                            <h1> -- Experiment06 -- </h1>   
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp07">   
+                            <h1> -- Experiment07 -- </h1>       
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp08">   
+                            <h1> -- Experiment08 -- </h1>   
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp09">   
+                            <h1> -- Experiment09 -- </h1>   
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp10">   
+                            <h1> -- Experiment10 -- </h1>   
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp11">   
+                            <h1> -- Experiment11 -- </h1>   
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+                    <p style="color:rgb(0, 0, 0);"> 
+                        
+                        <div id="exp12">   
+                            <h1> -- Experiment12 -- </h1>     
+                            <h3>Components Required</h3> <br>
+                        </div>  
+                        <ul>
+                            <li>Arduino UNO</li>
+                            <li>A Breadboard</li>
+                            <li>Male to male jumper wires (x2)</li>
+                            <li>LED</li>
+                            <li>USB cable to connect the arduino</li>
+                            <li>Resistor</li>
+                        </ul><br>
+                        <h3>Circuit Diagram</h3> <br>
+                        <h3>Code</h3> <br>
+                        <h3>Video Tutorial</h3> <br>
+                        
+
+                        <a href="#top">Go to Top</a>
+                    </p>
+
+
+                
+            </div>
+            <div class="sub-nav gd-left-navigation">
+                <div class="menu" >
+
+                    <a href="index.html" style="color:brown;background:cornsilk;">GTech - Group of Technology</a>
+                    <a href="aboutme.html" style="color:brown;background:cornsilk;">ABOUT ME</a>
+                    <br><br><br>
+                    <a href="level1.html" style="color:brown;background:burlywood;">LEVEL 1</a>
+                    <a href="level2.html" style="color:brown;background:cornsilk;">LEVEL 2</a>
+                    <a href="level3.html" style="color:brown;background:cornsilk;">LEVEL 3</a>
+                    <a href="level4.html" style="color:brown;background:cornsilk;">LEVEL 4</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gd-footer">
+    <block>
+        <div class="top-footer">
+            <div class="footer-navigation">
+                <div class="c1">
+
+                    <div class="footer-soc">
+                        <a href="https://www.youtube.com/channel/UCGkitrEFM78C0YXJgZoWYZA" class="fsoc-youtube" target="_blank">
+                            <img src="site/assets/img/common/fsoc-youtube.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/gooddaywork/" class="fsoc-facebook" target="_blank">
+                            <img src="site/assets/img/common/fsoc-facebook.png" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/company/goodday-work" class="fsoc-instagram" target="_blank">
+                            <img src="site/assets/img/common/fsoc-instagram.png" alt="">
+                        </a>
+                        <a href="https://twitter.com/gooddaywork" class="fsoc-twitter" target="_blank">
+                            <img src="site/assets/img/common/fsoc-twitter.png" alt="">
+                        </a>
+                        <a href="mailto:info@goodday.work" class="fsoc-email">
+                            <img src="site/assets/img/common/fsoc-email.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </block>
+</div>
+</body>
+</html>
