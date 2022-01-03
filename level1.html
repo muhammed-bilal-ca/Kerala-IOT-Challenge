@@ -27,51 +27,6 @@
     <meta name="msapplication-TileImage" content="/common/favico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     
-    <style>
-       @import "https://cdn.rawgit.com/google/code-prettify/master/styles/desert.css";
-$lightGray: #fafafa;
-$medBlue: #9baecf;
-$char: #292929;
-
-body {
-  width: 50%;
-  margin: 0 auto;
-  @media (max-width: 650px) {
-    width: 75%;
-  }
-  @media (max-width: 430px) {
-    width: 100%;
-  }
-}
-
-code,
-.code,
-pre {
-  font-family: 'Source Code Pro';
-  background: $char;
-  color: $lightGray;
-  font-size: 16px;
-  padding: 0;
-  padding: 10px;
-  &:before {
-    display: block;
-    width: calc(100%);
-    margin-left: -3px;
-    margin-top: -3px;
-    padding: 3px;
-    text-transform: uppercase;
-    content: attr(data-lang);
-    background: $medBlue;
-  }
-  .o {
-    color: orange;
-  }
-  .w {
-    color: white;
-  }
-}
-    </style>
-
 </head>
 
 <body class="page-templates page-template-view">
@@ -125,21 +80,7 @@ pre {
                         <h3>Circuit Diagram</h3> <br>
                         <img src="site\images\exp01.png" width="300" height="400">
                         <h3>Code</h3> <br>
-                            <pre data-lang='scss' class='prettyprint'>
-                            void setup()
-                            {
-                             pinMode(8, OUTPUT);
-                            }
-
-                            void loop()
-                            {
-                             digitalWrite(8, HIGH);
-                             delay(1000); // Wait for 1000 millisecond(s)
-                             digitalWrite(8, LOW);
-                             delay(1000); // Wait for 1000 millisecond(s)
-                            }
-
-                            </pre>
+                            
 <span style="color:darkmagenta;background:skyblue;"> 
                          void setup() <br>
                         &nbsp&nbsp&nbsp&nbsp{<br>
