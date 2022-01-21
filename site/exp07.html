@@ -1,0 +1,20 @@
+
+<html>
+<body>
+  int potpin=0;// initialize analog pin 0, connected with photovaristor <br>
+  int ledpin=11;// initialize digital pin 11,<br>
+  int val=0;// initialize variable val<br>
+  void setup()<br>
+  {<br>
+  pinMode(ledpin,OUTPUT);// set digital pin 11 as “output”<br>
+  Serial.begin(9600);// set baud rate at “9600”<br>
+  }<br>
+  void loop()<br>
+  {<br>
+  val=analogRead(potpin);// read the value of the sensor and assign it to val<br>
+  Serial.println(val);// display the value of val<br>
+  analogWrite(ledpin,val/4);// set up brightness（maximum value 255）<br>
+  delay(10);// wait for 0.01<br>
+  }<br>
+</body>
+</html>

@@ -11,25 +11,56 @@
 
 
     <title>LEVEL 1</title>
-    <meta name="description" content="With the GoodDay project management template for website development, you can create flawless websites by tracking all the phases of your website development process.">
 
     <link rel="stylesheet" type="text/css" href="site/assets/css/main580e.css?21-10-19">
     <script src="site/assets/js/index580e.js?21-10-19"></script>
 
-
+<!--
     <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-    <script src="../../cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>-->
 
 
-    
-    <link rel="manifest" href="https://www.goodday.work/common/favico/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/common/favico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    
+
+
+
+<style type="text/css">
+hr {
+    display: block;
+    height: 1px;
+	border: 6px solid black;
+    border-radius: 4px;
+
+    margin: 1em 0;
+    padding: 0;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<style media="screen">
+  
+</style>
+
+
 </head>
 
-<body class="page-templates page-template-view">
+  <body class="page-templates page-template-view">
+
     <div class="main-navigation ">
         <div class="nav-web">
             <div class="menu-container">
@@ -39,735 +70,503 @@
             </div>
         </div>
     </div>
+
     <div class="gd-section white h-90">
         <div class="gd-block ">
+            <div class="page-content">
+            </div>
         </div>
     </div>
     <div class="gd-page-with-subnav m-t-40">
+
         <div class="gd-block">
-            
+
             <div class="page-content">
-                    <u><h2>LEVEL 1 - EXPERIMENTS</h2></u>
-                    <h3>
-                    <li><a href="#exp01">EXP1-- Hello World LED Blinking</a></li>
-                    <li><a href="#exp02">EXP2-- Traffic Light</a></li>
-                    <li><a href="#exp03">EXP3-- LED Chasing Effect</a></li>   
-                    <li><a href="#exp04">EXP4-- Button Controlled LED</a></li>
-                    <li><a href="#exp05">EXP5-- Buzzer</a></li>   
-                    <li><a href="#exp06">EXP6-- RGB LED</a></li>   
-                    <li><a href="#exp07">EXP7-- LDR Light sensor</a></li>   
-                    <li><a href="#exp08">EXP8-- Flame sensor</a></li>   
-                    <li><a href="#exp09">EXP9-- LM35 Temperature Sensor</a></li>   
-                    <li><a href="#exp10">EXP10-- IR Remote Control Using TSOP</a></li>   
-                    <li><a href="#exp11">EXP11-- Potentiometer analog Value Reading</a></li>
-                    <li><a href="#exp12">EXP12-- 7 Segment Display</a></li> </h3>                  
 
-                       
-                   
-                        
-												<p style="color:rgb(0, 0, 0);"> 
-						                        
-						                        <div id="exp01">   
-						                            <h1> -- Experiment01 -- </h1> <br>         
-						                            <h3>Components Required</h3> <br>
-						                        </div>  
-						                        <ul>
-						                            <li>Arduino UNO</li>
-						                            <li>A Breadboard</li>
-						                            <li>Male to male jumper wires (x2)</li>
-						                            <li>LED</li>
-						                            <li>USB cable to connect the arduino</li>
-						                            <li>Resistor</li>
-						                        </ul><br><br><br>
+              <div  style="color:red">
+                <h2 style="color:red">LEVEL 1 - EXPERIMENTS</h2>
+                <h3>
+                  <u>
+                    <li style="color:red"><a href="#exp01">EXP1-- Hello World LED Blinking</a></li>
+                    <li style="color:red"><a href="#exp02">EXP2-- Traffic Light</a></li>
+                    <li style="color:red"><a href="#exp03">EXP3-- LED Chasing Effect</a></li>
+                    <li style="color:red"><a href="#exp04">EXP4-- Button Controlled LED</a></li>
+                    <li style="color:red"><a href="#exp05">EXP5-- Buzzer</a></li>
+                    <li style="color:red"><a href="#exp06">EXP6-- RGB LED</a></li>
+                    <li style="color:red"><a href="#exp07">EXP7-- LDR Light sensor</a></li>
+                    <li style="color:red"><a href="#exp08">EXP8-- Flame sensor</a></li>
+                    <li style="color:red"><a href="#exp09">EXP9-- LM35 Temperature Sensor</a></li>
+                    <li style="color:red"><a href="#exp10">EXP10-- IR Remote Control Using TSOP</a></li>
+                    <li style="color:red"><a href="#exp11">EXP11-- Potentiometer analog Value Reading</a></li>
+                    <li style="color:red"><a href="#exp12">EXP12-- 7 Segment Display</a></li> </h3>
+                  </u>
+                <hr>
 
 
-								<div class="gd-block">
-						            <div class="page-content">
-						                <h3>Circuit Diagram</h3> <br>
-						                        <img src="site\images\exp01.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<code>
-											<h3>Code</h3> <br>
-											int ledPin = 10; // define digital pin 10.<br>
-											void setup()<br>
-											{<br>
-											pinMode(ledPin, OUTPUT);// define pin with LED connected as output.<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											digitalWrite(ledPin, HIGH); // set the LED on.<br>
-											delay(1000); // wait for a second.<br>
-											digitalWrite(ledPin, LOW); // set the LED off.<br>
-											delay(1000); // wait for a second<br>
-											}<br>
-										</code>
-						            </div>
-						        </div>
+                                        <p style="color:rgb(0, 0, 0);">
+
+                                                    <div id="exp01">
+                                                      <br><br><br><br>  <h1 style="color:red"> -- Experiment01 -- Hello World LED Blinking --</h1> <br>
+                                                        <h3>Components Required</h3> <br>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Arduino UNO</li>
+                                                        <li>A Breadboard</li>
+                                                        <li>Male to male jumper wires (x2)</li>
+                                                        <li>LED</li>
+                                                        <li>USB cable to connect the arduino</li>
+                                                        <li>Resistor</li>
+                                                      </ul>
+
+                                <div class="gd-block">
+                                        <div class="page-content">
+                                          <h3>Circuit Diagram</h3> <br>
+                                                  <img src="site\images\exp01.png" width="300" height="400">
+                                        </div>
+                                        <div class="page-content">
+                                          <h3>Code</h3> <br>
+                      										<iframe src="site/exp01.html" title="exp02.html" height="400" >
+
+                      										</iframe>
+                                        </div>
+                                    </div>
 
 
 
-                       
-						
-                      <!--  <blockquote>
-                        	<span style="color:darkmagenta;"> 
-	                        	int ledPin = 10; // define digital pin 10.<br>
-								void setup()<br>
-								{<br>
-									pinMode(ledPin, OUTPUT);// define pin with LED connected as output.<br>
-								}<br>
-								void loop()<br>
-								{<br>
-									digitalWrite(ledPin, HIGH); // set the LED on.<br>
-									delay(1000); // wait for a second.<br>
-									digitalWrite(ledPin, LOW); // set the LED off.<br>
-									delay(1000); // wait for a second<br>
-								}<br>
-							</span>
-                        </blockquote> -->
-                            
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 01 VIDEO
-                        </video>
-                <a href="#top">Go to Top</a>
-                    </p>
-
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp02">   
-                            <h1> -- Experiment02 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino board *1</li>
-                            <li>USB cable *1</li>
-                            <li>Red M5 LED*1</li>
-                            <li>Yellow M5 LED*1</li>
-                            <li>Green M5 LED*1</li>
-                            <li>220Ω resistor *3</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard jumper wires* several</li>
-                        </ul><br><br><br>
-                        		<div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp02.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-				                        <blockquote>
-					                        	int redled =10; // initialize digital pin 8.<br>
-												int yellowled =7; // initialize digital pin 7.<br>
-												int greenled =4; // initialize digital pin 4.<br>
-												void setup()<br>
-												{<br>
-													pinMode(redled, OUTPUT);// set the pin with red LED as “output”<br>
-													pinMode(yellowled, OUTPUT); // set the pin with yellow LED as “output”<br>
-													pinMode(greenled, OUTPUT); // set the pin with green LED as “output”<br>
-												}<br>
-												void loop()<br>
-												{<br>
-													digitalWrite(greenled, HIGH);//// turn on green LED<br>
-													delay(5000);// wait 5 seconds<br>
-
-													digitalWrite(greenled, LOW); // turn off green LED<br>
-													for(int i=0;i<3;i++)// blinks for 3 times<br>
-													{<br>
-														delay(500);// wait 0.5 second<br>
-														digitalWrite(yellowled, HIGH);// turn on yellow LED<br>
-														delay(500);// wait 0.5 second<br>
-														digitalWrite(yellowled, LOW);// turn off yellow LED<br>
-													} <br>
-													delay(500);// wait 0.5 second<br>
-													digitalWrite(redled, HIGH);// turn on red LED<br>
-													delay(5000);// wait 5 seconds<br>
-													digitalWrite(redled, LOW);// turn off red LED<br>
-												}<br>
-				                        </blockquote>
-						            </div>
-						        </div>
-
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 02 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
-
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp03">   
-                            <h1> -- Experiment03 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>A Breadboard</li>
-                            <li>Male to male jumper wires (x2)</li>
-                            <li>LED</li>
-                            <li>USB cable to connect the arduino</li>
-                            <li>Resistor</li>
-                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 03 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp04">   
-                            <h1> -- Experiment04 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                        	<li>Arduino UNO</li>
-                            <li>Button switch*1</li>
-                            <li>MRed M5 LED*1</li>
-                            <li>220ΩResistor*1</li>
-                            <li>U10KΩ Resistor*1</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard Jumper Wire*6</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                                      <!--  <blockquote>
+                                          <span style="color:darkmagenta;">
+                                            int ledPin = 10; // define digital pin 10.<br>
+                                void setup()<br>
+                                {<br>
+                                  pinMode(ledPin, OUTPUT);// define pin with LED connected as output.<br>
+                                }<br>
+                                void loop()<br>
+                                {<br>
+                                  digitalWrite(ledPin, HIGH); // set the LED on.<br>
+                                  delay(1000); // wait for a second.<br>
+                                  digitalWrite(ledPin, LOW); // set the LED off.<br>
+                                  delay(1000); // wait for a second<br>
+                                }<br>
+                              </span>
+                                        </blockquote> -->
 
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 01 VIDEO
+                                        </video>
+                                <a href="#top">Go to Top</a>
+                                    </p>
+                <hr>
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 04 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                    <p style="color:rgb(0, 0, 0);">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp05">   
-                            <h1> -- Experiment05 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>Buzzer*1</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard Jumper Wire*2</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                                        <div id="exp02">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment02 -- Traffic Light --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino board *1</li>
+                                            <li>USB cable *1</li>
+                                            <li>Red M5 LED*1</li>
+                                            <li>Yellow M5 LED*1</li>
+                                            <li>Green M5 LED*1</li>
+                                            <li>220Ω resistor *3</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard jumper wires* several</li>
+                                        </ul><br><br><br>
+                                        		<div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp02.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp02.html" title="exp02.html" height="400">
+
+                										</iframe>
+
+                						            </div>
+                						        </div>
+
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp02.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 02 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp03">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment03 -- LED Chasing Effect --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>A Breadboard</li>
+                                            <li>Male to male jumper wires (x2)</li>
+                                            <li>LED</li>
+                                            <li>USB cable to connect the arduino</li>
+                                            <li>Resistor</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 05 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp03.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp03.html" title="exp03.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp06">   
-                            <h1> -- Experiment06 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>USB Cable * 1</li>
-                            <li>RGB LED * 1</li>
-                            <li>Resistor *3</li>
-                            <li>Breadboard jumper wire*5</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp03.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 03 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp04">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment04 -- Button Controlled LED --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                        	<li>Arduino UNO</li>
+                                            <li>Button switch*1</li>
+                                            <li>MRed M5 LED*1</li>
+                                            <li>220ΩResistor*1</li>
+                                            <li>U10KΩ Resistor*1</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard Jumper Wire*6</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 06 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp04.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp04.html" title="exp04.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp07">   
-                            <h1> -- Experiment07 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>Photo Resistor*1</li>
-                            <li>Red M5 LED*1</li>
-                            <li>0KΩ Resistor*1</li>
-                            <li>220Ω Resistor*1</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard Jumper Wire*5</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 04 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp05">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment05 -- Buzzer --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>Buzzer*1</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard Jumper Wire*2</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 07 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp05.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp05.html" title="exp05.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp08">   
-                            <h1> -- Experiment08 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>Flame Sensor *1</li>
-                            <li>Buzzer *1</li>
-                            <li>10K Resistor *1</li>
-                            <li>Breadboard Jumper Wire*6</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 05 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp06">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment06 -- RGB LED --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>USB Cable * 1</li>
+                                            <li>RGB LED * 1</li>
+                                            <li>Resistor *3</li>
+                                            <li>Breadboard jumper wire*5</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 08 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp06.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp06.html" title="exp06.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp09">   
-                            <h1> -- Experiment09 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>LM35*1</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard Jumper Wire*5</li>
-                            <li>USB cable*</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 06 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp07">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment07 -- LDR Light sensor --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>Photo Resistor*1</li>
+                                            <li>Red M5 LED*1</li>
+                                            <li>0KΩ Resistor*1</li>
+                                            <li>220Ω Resistor*1</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard Jumper Wire*5</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 09 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp07.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp07.html" title="exp07.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp10">   
-                            <h1> -- Experiment10 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>Infrared Remote Controller(You can use TV Remote or any other remote) *1</li>
-                            <li>Infrared Receiver *1</li>
-                            <li>LED *6</li>
-                            <li>220ΩResistor *6</li>
-                            <li>Breadboard Wire *11</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 07 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp08">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment08 -- Flame sensor --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>Flame Sensor *1</li>
+                                            <li>Buzzer *1</li>
+                                            <li>10K Resistor *1</li>
+                                            <li>Breadboard Jumper Wire*6</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 10 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp08.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp08.html" title="exp08.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp11">   
-                            <h1> -- Experiment11 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>10K Potentiometer *1</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard Jumper Wire*3</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 08 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp09">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment09 -- LM35 Temperature Sensor --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>LM35*1</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard Jumper Wire*5</li>
+                                            <li>USB cable*</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 11 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp09.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp09.html" title="exp09.html" height="400">
 
-                    <p style="color:rgb(0, 0, 0);"> 
-                        
-                        <div id="exp12">   
-                            <h1> -- Experiment12 -- </h1>          
-                            <h3>Components Required</h3> <br>
-                        </div>  
-                        <ul>
-                            <li>Arduino UNO</li>
-                            <li>1-digit LED Segment Display*1</li>
-                            <li>220Ω Resistor*8</li>
-                            <li>Breadboard*1</li>
-                            <li>Breadboard Jumper Wires *several</li>
-                            <li>USB cable*1</li>
-                        </ul><br><br><br>
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 09 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp10">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment10 -- IR Remote Control Using TSOP --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>Infrared Remote Controller(You can use TV Remote or any other remote) *1</li>
+                                            <li>Infrared Receiver *1</li>
+                                            <li>LED *6</li>
+                                            <li>220ΩResistor *6</li>
+                                            <li>Breadboard Wire *11</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
 
 
-                        <div class="gd-block">
-						            <div class="page-content">
-						               <h3>Circuit Diagram</h3> <br>
-                        					<img src="site\images\exp03.png" width="300" height="400">
-						            </div>
-						            <div class="page-content">
-										<h3>Code</h3> <br>
-										<blockquote>
-				                        	int BASE = 2 ;  // the I/O pin for the first LED<br>
-											int NUM = 6;   // number of LEDs<br>
-											void setup()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     pinMode(i, OUTPUT);   // set I/O pins as output<br>
-											   }<br>
-											}<br>
-											void loop()<br>
-											{<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.<br>
-											     delay(200);        // delay<br>
-											   }<br>
-											   for (int i = BASE; i < BASE + NUM; i ++) <br>
-											   {<br>
-											     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one<br>
-											     delay(200);        // delay<br>
-											   }  <br>
-											}<br>
-			                        </blockquote>
-						            </div>
-						        </div>
-                        <h3>Video</h3> <br>
-                        <video width="800" height="480" controls>
-                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
-                            LEVEL 01 - EXP 12 VIDEO
-                        </video>
-                        <a href="#top">Go to Top</a>
-                    </p>
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp10.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp10.html" title="exp10.html" height="400">
 
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 10 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp11">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment11 -- Potentiometer analog Value Reading --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>10K Potentiometer *1</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard Jumper Wire*3</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
+
+
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp11.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp11.html" title="exp11.html" height="400">
+
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 11 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+<hr>
+                                    <p style="color:rgb(0, 0, 0);">
+
+                                        <div id="exp12">
+                                            <br><br><br><br><h1 style="color:red"> -- Experiment12 -- 7 Segment Display --</h1>
+                                            <h3>Components Required</h3> <br>
+                                        </div>
+                                        <ul>
+                                            <li>Arduino UNO</li>
+                                            <li>1-digit LED Segment Display*1</li>
+                                            <li>220Ω Resistor*8</li>
+                                            <li>Breadboard*1</li>
+                                            <li>Breadboard Jumper Wires *several</li>
+                                            <li>USB cable*1</li>
+                                        </ul><br><br><br>
+
+
+                                        <div class="gd-block">
+                						            <div class="page-content">
+                						               <h3>Circuit Diagram</h3> <br>
+                                        					<img src="site\images\exp12.png" width="300" height="400">
+                						            </div>
+                						            <div class="page-content">
+                										<h3>Code</h3> <br>
+                										<iframe src="site/exp12.html" title="exp12.html" height="400">
+
+                										</iframe>
+                						            </div>
+                						        </div>
+                                        <h3>Video</h3> <br>
+                                        <video width="800" height="480" controls>
+                                            <source src="site\videos\level1-exp01.mp4" type="video/mp4">
+                                            LEVEL 01 - EXP 12 VIDEO
+                                        </video>
+                                        <a href="#top">Go to Top</a>
+                                    </p>
+
+
+
+              </div>
+
+            </div>
             </div>
             <div class="sub-nav gd-left-navigation">
                 <div class="menu" >
@@ -780,7 +579,7 @@
                     <a href="level4.html" style="color:brown;background:cornsilk;">LEVEL 4</a>
                 </div>
             </div>
-        </div>
+
     </div>
     <div class="gd-footer">
     <block>

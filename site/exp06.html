@@ -1,0 +1,33 @@
+
+<html>
+<body>
+  int redpin = 11; //select the pin for the red LED <br>
+  int bluepin =10; // select the pin for the blue LED<br>
+  int greenpin =9;// select the pin for the green LED<br>
+  int val;<br>
+  void setup() {<br>
+    pinMode(redpin, OUTPUT);<br>
+    pinMode(bluepin, OUTPUT);<br>
+    pinMode(greenpin, OUTPUT);<br>
+    Serial.begin(9600);<br>
+  }<br>
+  void loop() <br>
+  {<br>
+  for(val=255; val>0; val--)<br>
+    {<br>
+     analogWrite(11, val);<br>
+     analogWrite(10, 255-val);<br>
+     analogWrite(9, 128-val);<br>
+     delay(1); <br>
+    }<br>
+  for(val=0; val<255; val++)<br>
+    {<br>
+     analogWrite(11, val);<br>
+     analogWrite(10, 255-val);<br>
+     analogWrite(9, 128-val);<br>
+     delay(1); <br>
+    }<br>
+   Serial.println(val, DEC);<br>
+  }<br>
+</body>
+</html>

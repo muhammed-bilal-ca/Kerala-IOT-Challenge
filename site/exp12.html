@@ -1,0 +1,145 @@
+
+<html>
+<body>
+  int a=7;// set digital pin 7 for segment a <br>
+  int b=6;// set digital pin 6 for segment b<br>
+  int c=5;// set digital pin 5 for segment c<br>
+  int d=10;// set digital pin 10 for segment d<br>
+  int e=11;// set digital pin 11 for segment e<br>
+  int f=8;// set digital pin 8 for segment f<br>
+  int g=9;// set digital pin 9 for segment g<br>
+  int dp=4;// set digital pin 4 for segment dp<br>
+  void digital_0(void) // display number 5<br>
+  {<br>
+  unsigned char j;<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(e,HIGH);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,LOW);<br>
+  digitalWrite(dp,LOW);<br>
+  }<br>
+  void digital_1(void) // display number 1<br>
+  {<br>
+  unsigned char j;<br>
+  digitalWrite(c,HIGH);// set level as “high” for pin 5, turn on segment c<br>
+  digitalWrite(b,HIGH);// turn on segment b<br>
+  for(j=7;j<=11;j++)// turn off other segments<br>
+  digitalWrite(j,LOW);<br>
+  digitalWrite(dp,LOW);// turn off segment dp<br>
+  }<br>
+  void digital_2(void) // display number 2<br>
+  {<br>
+  unsigned char j;<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(a,HIGH);<br>
+  for(j=9;j<=11;j++)<br>
+  digitalWrite(j,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  digitalWrite(c,LOW);<br>
+  digitalWrite(f,LOW);<br>
+  }<br>
+  void digital_3(void) // display number 3<br>
+  {digitalWrite(g,HIGH);<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  digitalWrite(f,LOW);<br>
+  digitalWrite(e,LOW);<br>
+  }<br>
+  void digital_4(void) // display number 4<br>
+  {digitalWrite(c,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  digitalWrite(a,LOW);<br>
+  digitalWrite(e,LOW);<br>
+  digitalWrite(d,LOW);<br>
+  }<br>
+  void digital_5(void) // display number 5<br>
+  {<br>
+  unsigned char j;<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b, LOW);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(e, LOW);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  }<br>
+  void digital_6(void) // display number 6<br>
+  {<br>
+  unsigned char j;<br>
+  for(j=7;j<=11;j++)<br>
+  digitalWrite(j,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  digitalWrite(b,LOW);<br>
+  }<br>
+  void digital_7(void) // display number 7<br>
+  {<br>
+  unsigned char j;<br>
+  for(j=5;j<=7;j++)<br>
+  digitalWrite(j,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  for(j=8;j<=11;j++)<br>
+  digitalWrite(j,LOW);<br>
+  }<br>
+  void digital_8(void) // display number 8<br>
+  {<br>
+  unsigned char j;<br>
+  for(j=5;j<=11;j++)<br>
+  digitalWrite(j,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  }<br>
+  void digital_9(void) // display number 5<br>
+  {<br>
+  unsigned char j;<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(e, LOW);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(dp,LOW);<br>
+  }<br>
+  void setup()<br>
+  {<br>
+  int i;// set variable<br>
+  for(i=4;i<=11;i++)<br>
+  pinMode(i,OUTPUT);// set pin 4-11as “output”<br>
+  }<br>
+  void loop()<br>
+  {<br>
+  while(1)<br>
+  {<br>
+  digital_0();// display number 0<br>
+  delay(1000);// wait for 1s<br>
+  digital_1();// display number 1<br>
+  delay(1000);// wait for 1s<br>
+  digital_2();// display number 2<br>
+  delay(1000); // wait for 1s<br>
+  digital_3();// display number 3<br>
+  delay(1000); // wait for 1s<br>
+  digital_4();// display number 4<br>
+  delay(1000); // wait for 1s<br>
+  digital_5();// display number 5<br>
+  delay(1000); // wait for 1s<br>
+  digital_6();// display number 6<br>
+  delay(1000); // wait for 1s<br>
+  digital_7();// display number 7<br>
+  delay(1000); // wait for 1s<br>
+  digital_8();// display number 8<br>
+  delay(1000); // wait for 1s<br>
+  digital_9();// display number 9<br>
+  delay(1000); // wait for 1s<br>
+  }}<br>
+</body>
+</html>

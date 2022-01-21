@@ -1,0 +1,22 @@
+
+<html>
+<body>
+  int potpin=0;// initialize analog pin 0 <br>
+  int ledpin=13;// initialize digital pin 13<br>
+  int val=0;// define val, assign initial value 0<br>
+  void setup()<br>
+  {<br>
+  pinMode(ledpin,OUTPUT);// set digital pin as “output”<br>
+  Serial.begin(9600);// set baud rate at 9600<br>
+  }<br>
+  void loop()<br>
+  {<br>
+  digitalWrite(ledpin,HIGH);// turn on the LED on pin 13<br>
+  delay(50);// wait for 0.05 second<br>
+  digitalWrite(ledpin,LOW);// turn off the LED on pin 13<br>
+  delay(50);// wait for 0.05 second<br>
+  val=analogRead(potpin);// read the analog value of analog pin 0, and assign it to val <br>
+  Serial.println(val);// display val’s value<br>
+  }<br>
+</body>
+</html>

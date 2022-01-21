@@ -1,0 +1,133 @@
+
+<html>
+<body>
+  #include <IRremote.h> <br>
+  int RECV_PIN = 11;<br>
+  int LED1 = 2;<br>
+  int LED2 = 3;<br>
+  int LED3 = 4;<br>
+  int LED4 = 5;<br>
+  int LED5 = 6;<br>
+  int LED6 = 7;<br>
+  long on1  = 0x00FF6897;<br>
+  long off1 = 0x00FF9867;<br>
+  long on2 = 0x00FFB04F;<br>
+  long off2 = 0x00FF30CF;<br>
+  long on3 = 0x00FF18E7;<br>
+  long off3 = 0x00FF7A85;<br>
+  long on4 = 0x00FF10EF;<br>
+  long off4 = 0x00FF38C7;<br>
+  long on5 = 0x00FF5AA5;<br>
+  long off5 = 0x00FF42BD;<br>
+  long on6 = 0x00FF4AB5;<br>
+  long off6 = 0x00FF52AD;<br>
+  IRrecv irrecv(RECV_PIN);<br>
+  decode_results results;<br>
+  // Dumps out the decode_results structure.<br>
+  // Call this after IRrecv::decode()<br>
+  // void * to work around compiler issue<br>
+  //void dump(void *v) {<br>
+  //  decode_results *results = (decode_results *)v<br>
+  void dump(decode_results *results) {<br>
+    int count = results->rawlen;<br>
+    if (results->decode_type == UNKNOWN) <br>
+      {<br>
+       Serial.println("Could not decode message");<br>
+      } <br>
+    else <br>
+     {<br>
+      if (results->decode_type == NEC) <br>
+        {<br>
+         Serial.print("Decoded NEC: ");<br>
+        } <br>
+      else if (results->decode_type == SONY) <br>
+        {<br>
+         Serial.print("Decoded SONY: ");<br>
+        } <br>
+      else if (results->decode_type == RC5) <br>
+        {<br>
+         Serial.print("Decoded RC5: ");<br>
+        } <br>
+      else if (results->decode_type == RC6) <br>
+        {<br>
+         Serial.print("Decoded RC6: ");<br>
+        }<br>
+       Serial.print(results->value, HEX);<br>
+       Serial.print(" (");<br>
+       Serial.print(results->bits, DEC);<br>
+       Serial.println(" bits)");<br>
+     }<br>
+       Serial.print("Raw (");<br>
+       Serial.print(count, DEC);<br>
+       Serial.print("): ");<br>
+   for (int i = 0; i < count; i++) <br>
+       {<br>
+        if ((i % 2) == 1) {<br>
+        Serial.print(results->rawbuf[i]*USECPERTICK, DEC);<br>
+       } <br>
+      else  <br>
+       {<br>
+        Serial.print(-(int)results->rawbuf[i]*USECPERTICK, DEC);<br>
+       }<br>
+      Serial.print(" ");<br>
+       }<br>
+        Serial.println("");<br>
+       }<br>
+  void setup()<br>
+   {<br>
+    pinMode(RECV_PIN, INPUT);   <br>
+    pinMode(LED1, OUTPUT);<br>
+    pinMode(LED2, OUTPUT);<br>
+    pinMode(LED3, OUTPUT);<br>
+    pinMode(LED4, OUTPUT);<br>
+    pinMode(LED5, OUTPUT);<br>
+    pinMode(LED6, OUTPUT);  <br>
+    pinMode(13, OUTPUT);<br>
+    Serial.begin(9600);<br>
+     irrecv.enableIRIn(); // Start the receiver<br>
+   }<br>
+  int on = 0;<br>
+  unsigned long last = millis();<br>
+  void loop() <br>
+  {<br>
+    if (irrecv.decode(&results)) <br>
+     {<br>
+      // If it's been at least 1/4 second since the last<br>
+      // IR received, toggle the relay<br>
+      if (millis() - last > 250) <br>
+        {<br>
+         on = !on;<br>
+  //       digitalWrite(8, on ? HIGH : LOW);<br>
+         digitalWrite(13, on ? HIGH : LOW);<br>
+         dump(&results);<br>
+        }<br>
+      if (results.value == on1 )<br>
+         digitalWrite(LED1, HIGH);<br>
+      if (results.value == off1 )<br>
+         digitalWrite(LED1, LOW); <br>
+      if (results.value == on2 )<br>
+         digitalWrite(LED2, HIGH);<br>
+      if (results.value == off2 )<br>
+         digitalWrite(LED2, LOW); <br>
+      if (results.value == on3 )<br>
+         digitalWrite(LED3, HIGH);<br>
+      if (results.value == off3 )<br>
+         digitalWrite(LED3, LOW);<br>
+      if (results.value == on4 )<br>
+         digitalWrite(LED4, HIGH);<br>
+      if (results.value == off4 )<br>
+         digitalWrite(LED4, LOW); <br>
+      if (results.value == on5 )<br>
+         digitalWrite(LED5, HIGH);<br>
+      if (results.value == off5 )<br>
+         digitalWrite(LED5, LOW); <br>
+      if (results.value == on6 )<br>
+         digitalWrite(LED6, HIGH);<br>
+      if (results.value == off6 )<br>
+         digitalWrite(LED6, LOW);    <br>
+      last = millis();      <br>
+  irrecv.resume(); // Receive the next value<br>
+    }<br>
+  }<br>
+</body>
+</html>

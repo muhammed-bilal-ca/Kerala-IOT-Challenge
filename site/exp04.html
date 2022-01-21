@@ -1,0 +1,24 @@
+
+<html>
+<body>
+  int ledpin=11;// initialize pin 11 <br>
+  int inpin=7;// initialize pin 7<br>
+  int val;// define val<br>
+  void setup()<br>
+  {<br>
+  pinMode(ledpin,OUTPUT);// set LED pin as “output”<br>
+  pinMode(inpin,INPUT);// set button pin as “input”<br>
+  }<br>
+  void loop()<br>
+  {<br>
+  val=digitalRead(inpin);// read the level value of pin 7 and assign if to val<br>
+  if(val==LOW)// check if the button is pressed, if yes, turn on the LED<br>
+  {
+    digitalWrite(ledpin,LOW);<br>
+  }<br>
+  else<br>
+  { <br>
+    digitalWrite(ledpin,HIGH);}<br>
+  </body>
+  }<br>
+</html>

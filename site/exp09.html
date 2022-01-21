@@ -1,0 +1,21 @@
+
+<html>
+<body>
+  int potPin = 0; // initialize analog pin 0 for LM35 temperature sensor <br>
+  void setup()<br>
+  {<br>
+  Serial.begin(9600);// set baud rate at”9600”<br>
+  }<br>
+  void loop()<br>
+  {<br>
+  int val;// define variable<br>
+  int dat;// define variable<br>
+  val=analogRead(0);// read the analog value of the sensor and assign it to val<br>
+  dat=(125*val)>>8;// temperature calculation formula<br>
+  Serial.print("Tep");// output and display characters beginning with Tep<br>
+  Serial.print(dat);// output and display value of dat<br>
+  Serial.println("C");// display “C” characters<br>
+  delay(500);// wait for 0.5 second<br>
+  }<br>
+</body>
+</html>
