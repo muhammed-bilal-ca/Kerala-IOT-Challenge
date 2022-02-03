@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <body>
+
+  // set to 1 if we're debugging <br>
+  #define DEBUG 0<br>
+
+  // 6 consecutive digital pins for the LEDs<br>
+  int first = 2;<br>
+  int second = 3;<br>
+  int third = 4;<br>
+  int fourth = 5;<br>
+  int fifth = 6;<br>
+  int sixth = 7;<br>
+
+  // pin for the button switch<br>
+  int button = 12;<br>
+  // value to check state of button switch<br>
+  int pressed = 0;<br>
+
+  void setup() {<br>
+    // set all LED pins to OUTPUT<br>
+    for (int i=first; i<=sixth; i++) {<br>
+      pinMode(i, OUTPUT);<br>
+    }<br>
+    // set buttin pin to INPUT<br>
+    pinMode(button, INPUT);<br>
+
+    // initialize random seed by noise from analog pin 0 (should be unconnected)<br>
+    randomSeed(analogRead(0));<br>
+
+    // if we're debugging, connect to serial<br>
+    #ifdef DEBUG<br>
+      Serial.begin(9600);<br>
+    #endif<br>
+
+  }<br>
+
+  void buildUpTension() {<br>
+    // light LEDs from left to right and back to build up tension<br>
+    // while waiting for the dice to be thrown<br>
+    // left to right<br>
+    for (int i=first; i<=sixth; i++) {<br>
+      if (i!=first) {<br>
+        digitalWrite(i-1, LOW);<br>
+      }<br>
+      digitalWrite(i, HIGH);<br>
+      delay(100);<br>
+    }<br>
+    // right to left<br>
+    for (int i=sixth; i>=first; i--) {<br>
+      if (i!=sixth) {<br>
+        digitalWrite(i+1, LOW);<br>
+      }<br>
+      digitalWrite(i, HIGH);<br>
+      delay(100);<br>
+    }<br>
+  }<br>
+
+  void showNumber(int number) {<br>
+    digitalWrite(first, HIGH);<br>
+    if (number >= 2) {<br>
+      digitalWrite(second, HIGH);<br>
+    }<br>
+    if (number >= 3) {<br>
+      digitalWrite(third, HIGH);<br>
+    }<br>
+    if (number >= 4) {<br>
+      digitalWrite(fourth, HIGH);<br>
+    }<br>
+    if (number >= 5) {<br>
+      digitalWrite(fifth, HIGH);<br>
+    }<br>
+    if (number == 6) {<br>
+      digitalWrite(sixth, HIGH);<br>
+    }<br>
+  }<br>
+
+  int throwDice() {<br>
+    // get a random number in the range [1,6]<br>
+    int randNumber = random(1,7);<br>
+
+    #ifdef DEBUG<br>
+      Serial.println(randNumber);<br>
+    #endif<br>
+
+    return randNumber;<br>
+  }<br>
+
+  void setAllLEDs(int value) {<br>
+    for (int i=first; i<=sixth; i++) {<br>
+      digitalWrite(i, value);<br>
+    }<br>
+  }<br>
+
+  void loop() {<br>
+    // if button is pressed - throw the dice<br>
+    pressed = digitalRead(button);<br>
+
+    if (pressed == HIGH) {<br>
+      // remove previous number<br>
+      setAllLEDs(LOW);<br>
+
+      buildUpTension();<br>
+      int thrownNumber = throwDice();<br>
+      showNumber(thrownNumber);<br>
+    }<br>
+
+  }<br>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <body>
+  const int LED=2;            // LED connect to Digital Pin <br>
+const int LDRSensor= A0;    //Sensor pin connects to analog pin A0 <br>
+
+int state;                  //declaring variable to store the reading <br>
+int threshold=600;          //threshold voltage declared<br>
+
+void setup()<br>
+{<br>
+pinMode (LED, OUTPUT);<br>
+Serial.begin(9600);<br>
+}<br>
+
+void loop()<br>
+{<br>
+state= analogRead(LDRSensor); //sensor reading value stored in state variable<br>
+if (state < threshold)<br>
+  {<br>
+    digitalWrite(LED, HIGH); //if the light is below the threshold value, the LED will turns on<br>
+    Serial.println(state);<br>
+    delay(2000);<br>
+  }<br>
+else<br>
+  {<br>
+    digitalWrite(LED, LOW); //otherwise, the LED is off<br>
+    Serial.println(state);<br>
+    delay(1000);<br>
+  }<br>
+}<br>
+
+  </body>
+</html>
